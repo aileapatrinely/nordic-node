@@ -33,8 +33,6 @@ module.exports = function (box) {
         function()
     }
   }
-}
-
   console.log(num_vials);
 };
 
