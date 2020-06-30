@@ -22,10 +22,14 @@
 // then move on to boxes in boxes in boxes. Boxes in boxes will be a big stretch.
 // You may want to research recursion if you get this far.
 
-
 module.exports = function (box) {
-    // YOUR CODE HERE
-
-}
+  let num_vials = 0;
+  for (let contents of box) {
+    if (contents == 'vial') {
+      num_vials++;
+    }
+  }
+  console.log(num_vials);
+};
 
 // Don't forget to write tests!

@@ -9,9 +9,8 @@
 // if the input number was 2, the result should be 3
 
 module.exports = function (numberOfBoxes) {
-  const nodeObjects = require('./challenges/120-node-objects');
-
-  const dogsneeded = NodeObjects.numberOfBoxes / 2 + 2;
+  let dogsNeeded = parseFloat(numberOfBoxes / 2 + 2);
+  return dogsNeeded.toFixed(0);
 };
 
 // now run `node test.js` in the terminal, to see what happens
