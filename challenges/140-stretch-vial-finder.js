@@ -25,10 +25,16 @@
 module.exports = function (box) {
   let num_vials = 0;
   for (let contents of box) {
-    if (contents == 'vial') {
-      num_vials++;
+    if (!typeof contents === 'Array') {
+       if (contents == 'vial' ){
+            num_vials++;
+       }
+    }else{
+        function()
     }
   }
+}
+
   console.log(num_vials);
 };
 
