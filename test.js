@@ -39,4 +39,4 @@ if (nodeFunction(8) == 6) {
     XXXXXXXXXXX`);
 }
 
-newNodeFunction(['vial', 'sandwich', 'vial']);
+newNodeFunction(['vial', 'sandwich', 'vial', ['potato', 'vial', 'spuds']]);

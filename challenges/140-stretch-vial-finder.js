@@ -21,19 +21,23 @@
 // start small by handling the first two cases (only worry about an array of strings)
 // then move on to boxes in boxes in boxes. Boxes in boxes will be a big stretch.
 // You may want to research recursion if you get this far.
+let num_vials = 0;
 
-module.exports = function (box) {
-  let num_vials = 0;
+function checkBox(box) {
+  console.log(box);
+  console.log(typeof box);
   for (let contents of box) {
-    if (!typeof contents === 'Array') {
-       if (contents == 'vial' ){
-            num_vials++;
-       }
-    }else{
-        function()
+    if (!Array.isArray(contents)) {
+      if (contents == 'vial') {
+        num_vials++;
+      }
+    } else {
+      checkBox(contents);
     }
   }
   console.log(num_vials);
-};
+}
+
+module.exports = checkBox;
 
 // Don't forget to write tests!
